@@ -50,6 +50,17 @@ public class ArticuloRepositorio {
 
         return null;
     }
+    public java.util.List<Articulo> filtrarPorCategoria(String categoria) {
+        java.util.List<Articulo> resultado = new java.util.ArrayList<>();
+
+        for (Articulo articulo : articulos) {
+            if (articulo.getCategoria().equalsIgnoreCase(categoria)) {
+                resultado.add(articulo);
+            }
+        }
+
+    return resultado;
+}
 
     public boolean existeCodigo(String codigo) {
         return codigos.contains(codigo);
