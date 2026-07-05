@@ -20,16 +20,12 @@ public class ArchivoUtil {
 
     public static void exportarInventario(List<Articulo> articulos, File archivo)
             throws ArchivoException {
-
-        
         
         try (FileWriter escritor = new FileWriter(archivo)) {
 
             
             escritor.write("ID,Codigo,Nombre,Categoria,Cantidad,Precio,Disponible\n");
 
-            
-            
             for (Articulo articulo : articulos) {
 
                 escritor.write(
@@ -43,8 +39,6 @@ public class ArchivoUtil {
                 );
             }
 
-            
-            
             
         } catch (IOException e) {
             throw new ArchivoException("Error al exportar el inventario.", e);
