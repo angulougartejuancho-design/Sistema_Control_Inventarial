@@ -8,9 +8,9 @@ package Excepciones;
  *
  * @author angul
  */
-public class ProductoDuplicadoException extends Exception {
+public class ArticuloDuplicadoException extends Exception {
 
-    public ProductoDuplicadoException(String mensaje) {
+    public ArticuloDuplicadoException(String mensaje) {
         super(mensaje);
     }
 }
